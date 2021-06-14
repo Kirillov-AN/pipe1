@@ -11,7 +11,8 @@ pipeline {
        stages {
            stage("Preparations"){
                steps{
-                  sh 'echo lol'
+                  dir ('python/'){
+                       sh 'docker build . '
                  }
                  }
            }
